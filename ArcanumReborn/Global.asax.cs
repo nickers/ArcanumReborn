@@ -1,5 +1,7 @@
-﻿using System.Web.Http;
+﻿using ArcanumReborn.App_Start;
+using System.Web.Http;
 using System.Web.Mvc;
+using System.Web.Optimization;
 using System.Web.Routing;
 
 namespace ArcanumReborn
@@ -12,6 +14,7 @@ namespace ArcanumReborn
         {
             AreaRegistration.RegisterAllAreas();
 
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
