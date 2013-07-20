@@ -8,6 +8,7 @@ namespace ArcanumReborn.App_Start
         {
             bundles.Add(new ScriptBundle("~/Scripts/Libraries").Include(
                 "~/Scripts/Libs/jquery-{version}.js",
+                "~/Scripts/Libs/jquery-ui-{version}.js",
                 "~/Scripts/Libs/buzz.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/GameStaff").Include(
