@@ -193,16 +193,16 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\buzz.js" />
-    <Content Include="Scripts\classy.js" />
-    <Content Include="Scripts\ezelia.js" />
-    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
-    <Content Include="Scripts\jquery-2.0.3.js" />
-    <Content Include="Scripts\jquery-2.0.3.min.js" />
-    <Content Include="Scripts\jquery-ui-1.10.3.js" />
-    <Content Include="Scripts\jquery-ui-1.10.3.min.js" />
-    <Content Include="Scripts\preloadjs-0.3.1.min.js" />
-    <Content Include="Scripts\sheetengine-1.2.0.js" />
+    <Content Include="Scripts\Game\main.js" />
+    <Content Include="Scripts\Libs\buzz.js" />
+    <Content Include="Scripts\Libs\classy.js" />
+    <None Include="Scripts\Libs\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\Libs\jquery-2.0.3.js" />
+    <Content Include="Scripts\Libs\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\Libs\jquery-ui-1.10.3.js" />
+    <Content Include="Scripts\Libs\jquery-ui-1.10.3.min.js" />
+    <Content Include="Scripts\Libs\preloadjs-0.3.1.min.js" />
+    <Content Include="Scripts\Engine\sheetengine-1.2.0.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -211,7 +211,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Scripts\jquery-2.0.3.min.map" />
+    <Content Include="Scripts\Libs\jquery-2.0.3.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
