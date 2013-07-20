@@ -1,0 +1,27 @@
+﻿<script type="text/javascript">
+     $.Url = $.Url || {};
+     $.extend($.Url, {
+         Action: function(action, controller) {
+             controller = controller || "Home";
+
+             return "@Url.Action("Ping", "Home")".replace("Home", controller).replace("Ping", action);
+         },
+
+         Content: function(contentUrl) {
+             return "@Url.Content("~/")" + contentUrl.replace('~/', '');
+         }
+     });
+
+    $.Diagnostic = $.Diagnostic || {};
+    $.extend($.Diagnostic, {
+        IsDebug: @(HttpContext.Current.IsDebuggingEnabled.ToString().ToLowerInvariant()),
+
+        DebugMsg: function(msg) {
+            if (!$.Diagnostic.IsDebug) {
+                return;
+            }
+
+            console.log(msg);
+        }
+    });
+ </script>

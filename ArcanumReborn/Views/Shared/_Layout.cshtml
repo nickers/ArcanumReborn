@@ -4,14 +4,17 @@
 
 <html>
     <head>
-        <title>Test Canvas site</title>
+        <title>Arcanum Reborn</title>
 
         @Styles.Render("~/Styles")
     </head>
     <body>
         @RenderBody()
 
-        @Scripts.Render("~/Scripts/Libs")
-        @Scripts.Render("~/Scripts/Game")
+        @Scripts.Render("~/Scripts/Libraries")
+
+        @Html.Partial("RazoredScripts")
+
+        @Scripts.Render("~/Scripts/GameStaff")
     </body>
 </html>
