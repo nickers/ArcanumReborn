@@ -129,7 +129,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="Content\css\main.css" />
+    <None Include="Content\css\main.less" />
+    <Content Include="Content\css\main.css">
+      <DependentUpon>main.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\main.min.css">
+      <DependentUpon>main.less</DependentUpon>
+    </Content>
+    <Content Include="Content\images\airship.jpg" />
     <Content Include="Content\music\Arcanum.mp3" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -194,6 +201,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Game\contentLoader.js" />
     <Content Include="Scripts\Game\main.js" />
     <Content Include="Scripts\Game\soundsManager.js" />
     <Content Include="Scripts\Libs\buzz.js" />
@@ -203,7 +211,7 @@
     <Content Include="Scripts\Libs\jquery-2.0.3.min.js" />
     <Content Include="Scripts\Libs\jquery-ui-1.10.3.js" />
     <Content Include="Scripts\Libs\jquery-ui-1.10.3.min.js" />
-    <Content Include="Scripts\Libs\preloadjs-0.3.1.min.js" />
+    <Content Include="Scripts\Libs\preloadjs-0.3.1.js" />
     <Content Include="Scripts\Engine\sheetengine-1.2.0.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -218,6 +226,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\RazoredScripts.cshtml" />
+    <Content Include="Views\Home\Loader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

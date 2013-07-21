@@ -1,0 +1,43 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+#world {
+    display: block;
+}
+
+/* Loader */
+
+#loader {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background-color:black;
+    text-align:center;
+}
+
+#loaderImg {
+    margin-top:10%;
+}
+
+#loaderProgress
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 800px;
+    height: 10px;
+    border-radius: 0;
+
+    > div
+    {
+        background: darkgreen;
+    }
+}

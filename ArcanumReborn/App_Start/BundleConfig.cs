@@ -9,15 +9,19 @@ namespace ArcanumReborn.App_Start
             bundles.Add(new ScriptBundle("~/Scripts/Libraries").Include(
                 "~/Scripts/Libs/jquery-{version}.js",
                 "~/Scripts/Libs/jquery-ui-{version}.js",
-                "~/Scripts/Libs/buzz.js"));
+                "~/Scripts/Libs/buzz.js",
+                "~/Scripts/Libs/preloadjs-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/GameStaff").Include(
                 "~/Scripts/Engine/*.js",
+                "~/Scripts/Game/contentLoader.js",
                 "~/Scripts/Game/soundsManager.js",
                 "~/Scripts/Game/main.js"));
 
             bundles.Add(new StyleBundle("~/Styles").Include(
-                "~/Content/css/*.css"));
+                "~/Content/css/*.css",
+                "~/Content/themes/base/jquery-ui.css",
+                "~/Content/themes/base/jquery.ui.progressbar.css"));
         }
     }
 }
