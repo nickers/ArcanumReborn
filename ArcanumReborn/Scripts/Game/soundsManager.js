@@ -6,6 +6,11 @@ $.extend($.SoundsManager, (function($) {
             Name: "MainTheme",
             Url: $.Url.Content("~/Content/music/Arcanum"),
             Format: "mp3"
+        },
+        {
+            Name: "Sahara",
+            Url: $.Url.Content("~/Content/images/textures/background/sahara"),
+            Format: "jpg"
         }
     ];
 

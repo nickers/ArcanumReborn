@@ -13,10 +13,23 @@
         $.SoundsManager.Init();
 
         // First canvas content
-        sheetengine.scene.init(canvas, { w: 2000, h: 3000 });
+        var assetSize = 512,
+            mainHeight = assetSize * 5,
+            mainWidth = assetSize * 5;
 
-        var basesheet = new sheetengine.BaseSheet({ x: 0, y: 0, z: 0 }, { alphaD: 90, betaD: 0, gammaD: 0 }, { w: 200, h: 200 });
-        basesheet.color = '#5D7E36';
+        sheetengine.scene.init(canvas, { w: mainWidth, h: mainHeight });
+
+        var img = new Image(),
+            sahara = $.SoundsManager.GetResourceByName("Sahara");
+        img.src = sahara.Url + "." + sahara.Format;
+
+        for (var x = -1; x <= 1; x++) {
+            for (var y = -1; y <= 1; y++) {
+                var basesheet = new sheetengine.Sheet({ x: x * assetSize, y: y * assetSize, z: 0 }, { alphaD: 90, betaD: 0, gammaD: 0 }, { w: assetSize, h: assetSize });
+                //basesheet.color = '#5D7E36';
+                basesheet.context.drawImage(img, 0,0);
+            }
+        }
 
         sheetengine.calc.calculateAllSheets();
 
@@ -43,8 +56,8 @@
             }
 
             sheetengine.scene.moveCenter(displacement);
-            sheetengine.calc.calculateAllSheets();
-            sheetengine.drawing.drawScene(true);
+            //sheetengine.calc.calculateChangedSheets();
+            sheetengine.drawing.drawScene();
         });
     });
 })();

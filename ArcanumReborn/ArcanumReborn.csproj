@@ -137,6 +137,7 @@
       <DependentUpon>main.less</DependentUpon>
     </Content>
     <Content Include="Content\images\airship.jpg" />
+    <Content Include="Content\images\textures\background\sahara.jpg" />
     <Content Include="Content\music\Arcanum.mp3" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
