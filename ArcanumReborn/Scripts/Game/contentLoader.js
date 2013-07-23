@@ -1,5 +1,4 @@
 ﻿$.ContentLoader = $.ContentLoader || {};
-
 $.extend($.ContentLoader, (function($) {
     var $loader = $("#loader"),
         $loaderProgress = $("#loaderProgress"),

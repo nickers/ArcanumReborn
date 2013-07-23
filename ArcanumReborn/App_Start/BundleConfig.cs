@@ -14,8 +14,11 @@ namespace ArcanumReborn.App_Start
 
             bundles.Add(new ScriptBundle("~/Scripts/GameStaff").Include(
                 "~/Scripts/Engine/*.js",
+                "~/Scripts/Game/contentManager.js",
                 "~/Scripts/Game/contentLoader.js",
                 "~/Scripts/Game/soundsManager.js",
+                "~/Scripts/Game/assetsManager.js",
+                "~/Scripts/Game/keyboardManager.js",
                 "~/Scripts/Game/main.js"));
 
             bundles.Add(new StyleBundle("~/Styles").Include(

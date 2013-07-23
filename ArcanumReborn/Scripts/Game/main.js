@@ -1,5 +1,9 @@
 ﻿(function () {
-    $.ContentLoader.AddContent($.SoundsManager.GetAllResourcesUrl());
+    var allContentUrls = $.map($.ContentManager.GetAllContent(), function(c) {
+        return c.Url;
+    });
+
+    $.ContentLoader.AddContent(allContentUrls);
     $.ContentLoader.StartLoading(function() {
         var canvas = document.getElementById('world');
 
@@ -14,17 +18,17 @@
 
         // First canvas content
         var assetSize = 512,
-            mainHeight = assetSize * 5,
-            mainWidth = assetSize * 5;
+            mainHeight = assetSize * 7,
+            mainWidth = assetSize * 7;
 
         sheetengine.scene.init(canvas, { w: mainWidth, h: mainHeight });
 
         var img = new Image(),
-            sahara = $.SoundsManager.GetResourceByName("Sahara");
-        img.src = sahara.Url + "." + sahara.Format;
+            sahara = $.ContentManager.GetContent("Sahara");
+        img.src = sahara.Url;
 
-        for (var x = -1; x <= 1; x++) {
-            for (var y = -1; y <= 1; y++) {
+        for (var x = -2; x <= 2; x++) {
+            for (var y = -2; y <= 2; y++) {
                 var basesheet = new sheetengine.Sheet({ x: x * assetSize, y: y * assetSize, z: 0 }, { alphaD: 90, betaD: 0, gammaD: 0 }, { w: assetSize, h: assetSize });
                 //basesheet.color = '#5D7E36';
                 basesheet.context.drawImage(img, 0,0);
